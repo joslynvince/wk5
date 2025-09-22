@@ -1,0 +1,14 @@
+  header{
+    text-align: center;
+    text-size-adjust: 30;
+  }
+
+img {
+    max-width: 20%;
+    height: auto;
+    margin-left: 40%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: blue;
+    border
+  }
