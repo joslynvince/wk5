@@ -24,18 +24,10 @@
     gap: 10px;
     justify-items: center;
   }
-}
 
-/* 2-1-2-1 pattern */
-@media (min-width: 768px) {
-  .grid{
-    grid-template-columns: 45% 45%;
-    gap: 10px;
-    justify-items: center;
-  }
   .grid > div:nth-child(3n) {
     grid-column: 1/-1;
-    width: 50%
+    width: 50%;
   }
 
   .gallery{
@@ -47,12 +39,10 @@
   }
 
   .grid div:nth-child(even) img{
+    background-color: aqua;
     border: none;
     filter: none;
-}
-.grid div:nth-child(even){
-    background-color: aqua;
-}
+  }
   
 }
 
@@ -60,6 +50,11 @@
   .grid{
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 10px
+  }
+
+  .grid > div:nth-child(3n) {
+    grid-column: auto;
+    width: auto;
   }
 
   .gallery{
@@ -72,17 +67,26 @@
 
   .grid > div:hover{
     box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    transition: box-shadow 0.3s ease;
   }
 }
  
 @media print{
-  body{
+  body, section{
     background: white;
-    color: black
+    color: black;
   }
-  .grid{
-    grid: 90%;
-    border-width: 2px;
+  .gallery {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px
+  }
+  .grid > div {
+    background: white;
+    border: 1px solid black;
     page-break-inside: avoid;
   }
 
@@ -107,33 +111,3 @@
     border: 1px solid red;
   }
 }
-
-
-/*@media(screen and min-width: 60px)
-{
-
-}
-
-@media screen and min-width: 60px{
-  
-}
-
-@media (prefers-reduced-motion: reduce){
-  .gallery img:hover,
-  .grid > div:hover {
-    tra
-  }
-}
-
-@media (prefers-color-scheme: dark){
-  body {
-    background: #111;
-    color: #eee;
-  }
-
-  .grid > div {
-    background: #222;
-    border: 1px solid red;
-  }
-}
-*/
