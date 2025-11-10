@@ -60,8 +60,9 @@ dl {
   grid-template-columns: 1fr;
   grid-template-columns: 45% 45%;
   grid-template-columns: 1fr 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));*/
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: 1fr;
   gap: 15px;
   padding: 15px;
 }
@@ -82,4 +83,10 @@ dl {
 .gallery img:hover{
   transform: scale(1.5);
 }
-  
+
+.grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px solid orange;
+}
+
